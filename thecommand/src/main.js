@@ -7,8 +7,12 @@ import './assets/css/global.css'
 import axios from 'axios'
 Vue.prototype.$http = axios
 //配置请求的根路径
-// axios.defaults.baseUrl = http://114.55.98.156:8083/command/;
-
+axios.defaults.baseURL='http://114.55.98.156:8083';
+//axios拦截器token验证
+// axios.interceptors.request.use()(config => {
+//   console.log(config)
+//   return config
+// })
 Vue.config.productionTip = false
 
 new Vue({
